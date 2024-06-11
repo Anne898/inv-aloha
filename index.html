@@ -57,6 +57,7 @@
       background-size: cover;
       transition: opacity 1s ease-in-out;
       z-index: 1;
+      cursor: pointer;
     }
 
     #video {
@@ -146,15 +147,8 @@
       var botonDireccion = document.getElementById('boton-direccion');
       var botonAsistencia = document.getElementById('boton-asistencia');
 
-      video.addEventListener('click', function () {
-        if (video.paused) {
-          video.play();
-        } else {
-          video.pause();
-        }
-      });
-
-      video.addEventListener('play', function () {
+      poster.addEventListener('click', function () {
+        video.play();
         poster.style.opacity = '0';
         setTimeout(() => {
           poster.style.display = 'none';
